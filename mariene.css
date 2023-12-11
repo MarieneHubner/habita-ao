@@ -1,0 +1,407 @@
+@charset "utf-8";
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+
+article .section p{
+  text-align: justify;
+}
+
+
+/*------------------Formatações Gerais-----------------*/
+
+/*---------------Header--------------------------------*/
+header {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 3.5vw;
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+}
+
+header .nav-left img{
+  width: 150px;
+  height: 100px;
+}
+header .nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left h3 {
+  font-size: 2em;
+  font-family: fonte;
+  
+}
+
+header .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  margin-right: 8vw;
+}
+
+.nav-right a {
+  white-space: nowrap;
+  text-decoration: none;
+  color: black;
+  font-size: 1.6em;
+  font-weight: 600;
+}
+
+.nav-right a:hover {
+  color: #17594A;
+}
+
+.dropdown button {
+  background-color: #17594A;
+  border-color: #17594A;
+  font-size: 1.6em;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0% 11%;
+  border-radius: 100px;
+  padding-bottom: -5%;
+}
+
+.dropdown button:hover,
+.dropdown button:active {
+  background-color: #000;
+  border-color: #0000;
+  color: #ffffff;
+}
+
+.dropdown ul {
+  width: 120%;
+  border-radius: 10px;
+}
+
+.dropdown-menu li:nth-child(1) a {
+  color: #ed7d31;
+  border-radius: 0px;
+}
+
+.dropdown-menu li:nth-child(2) a {
+  color: #E73C35;
+  border-radius: 0px;
+}
+
+.dropdown-menu li:nth-child(3) a {
+  color: #1f4172;
+  border-radius: 0px;
+}
+
+.dropdown-menu li:nth-child(4) a {
+  color: #3d30a2;
+  border-radius: 0px;
+}
+
+.dropdown-menu li:nth-child(5) a {
+  color: #17594A;
+  border-radius: 0px;
+}
+
+.dropdown-menu li:nth-child(1) a:hover {
+  color: #ffffff;
+  background-color: #ed7d31;
+}
+
+.dropdown-menu li:nth-child(2) a:hover {
+  color: #ffffff;
+  background-color: #E73C35;
+}
+
+.dropdown-menu li:nth-child(3) a:hover {
+  color: #ffffff;
+  background-color: #1f4172;
+}
+
+.dropdown-menu li:nth-child(4) a:hover {
+  color: #ffffff;
+  background-color: #3d30a2;
+}
+.dropdown-menu li:nth-child(5) a:hover {
+  color: #ffffff;
+  background-color: #17594A;
+}
+
+/*---------------Header--------------------------------*/
+
+ /*--------------------Main(imagem inicial com sogan)-------------------------*/
+
+.containerMain{
+  background-image: url(img/Mariene/img20220203100811156-768x512.jpg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /*!important (Nada irá sobrepor esse elemento, supera todos outros tipos de configuracao que o afetem)*/
+  height: 100vh !important; /*Nesse caso Nada será capaz de mudar a altura*/
+  width: 100vw;                /*"vh" viewport height (altura de visualização da tela)*/
+  overflow: hidden;
+  position: relative;
+  background-position: 50% 50%; /*50% vertical e 50% horizontal*/
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+;
+}
+
+.containerMain:after{
+    content: ""; /*Significa que essa section ficará vazia*/
+    top: 7.5vh; /*Modifique aqui para nao cobrir o cabecaho */
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 1; /*Distancia entre o elemento e o plano de fundo (profundidade)*/                      
+    background-color: #17594a50; /*Efeito de sombra fade nas imagens (por causa do to bottom esse efeito é no final da imagem, se botar outras opções podemos fazer o efeito de sombra em outras partes da imagem)*/
+}
+
+
+.containerMain h1{
+  z-index: 2;
+  font-size: 5em;
+  color: #ffffff;
+}
+
+.containerMain a {
+  align-items: center;
+  z-index: 2;
+  font-size: 1.8em;
+  font-weight: 620;
+  text-decoration: none;
+  color: #17594A;
+  background-color: #fff;
+  align-self: center;
+  justify-self: center;
+  margin-top: 5vh;
+  padding: 0.5vh 3vw;
+  border-radius: 10px;
+  transition: .4s;
+  
+}
+
+.containerMain a:hover{
+  transform: scale(1.01, 1.01);
+  transition: .4s;
+  background-color: #17594A;
+  color: #fff;
+  font-weight: 700;
+}
+ /*--------------------Main(imagem inicial com sogan)-------------------------*/
+ 
+
+ /*-----------------------------------footer---------------------------------*/
+
+ footer{
+  background-image: url(ondas-removebg-preview.png);
+  background-size: 100vw;
+  background-position: 0% 5vh;
+  padding: 0% 3.5vw;
+  display: flex;
+  background-repeat: no-repeat;
+  height: 75vh;
+  width: 100vw;
+  bottom: 0;
+  z-index: -10;
+}
+
+.contatos{
+display: flex;
+}
+
+.img1{
+width: 300px;
+height: 200px;
+margin-left: 15%;
+}
+
+
+.info2{
+  font-family: sans-serif;
+  font-size: 1em;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-right: 7vw;
+  margin-bottom: -1vh;
+}
+
+.info2 img{
+  width: 1.7vw;
+  height: 3.2vh;
+  margin: 1vh 1vw 1vh 0vw;
+  filter: grayscale(100%);
+  transition: .4s;
+}
+.info2 img:hover{
+  transform: scale(1.2, 1.2);
+  transition: .4s;
+  filter: none;
+}
+
+.informacoes{
+  font-family: sans-serif;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end;
+  align-items: baseline;
+  margin-bottom: 1.5vh;
+  margin-right: 3vw;
+}
+
+.nos-fotter{
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.nos{
+  width: 100%;
+  height: 60%;
+}
+
+/*-----------------------------------footer---------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: fonte;
+  src: url(fonte/PetrovSans-Black.ttf);
+}
+
+h1 {
+  font-family: fonte;
+  font-size: 1em;
+}
+
+
+h2 {
+  font-size: 1.2em;
+  font-family: 'Cuprum', sans-serif;
+  font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-srif;
+
+}
+
+
+p {
+  font-family: 'Cuprum', sans-serif;
+  font-family: 'Merriweather', serif;
+  font-family: 'Poppins', sans-srif;
+}
+
+body {
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fdffff;
+  /* text-align: justify; */
+  overflow-x: hidden;
+}
+
+.main-header {
+  display: flex;
+  /*tira do formato padrão e possibilita montar o site de forma mais dinâmica, devemos colocar este antes dos (flex-direction e align-items)*/
+  flex-direction: column;
+  /*manterá o item (tag, class, id) em formato de coluna, linha, coluna invertida e linha unvertida*/
+  align-items: center;
+  /*irá posicionar o item seguindo a regra do formato escolhido em flex-direction*/
+  justify-content: center;
+  text-align: center;
+  padding: 2em;
+}
+
+.main-header h1 {
+  font-size: 4em;
+  margin-bottom: 1.2em;
+  line-height: 1.2em;
+}
+
+.main-header h1 {
+  color: #17594a;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  overflow: auto;
+  padding: 0 2em;
+  margin-top: 100px;
+}
+
+img {
+  width: 100%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  background: #589687;
+  margin-bottom: 2em;
+
+}
+
+.card h3 {
+  margin-bottom: 2em;
+}
+
+.card div {
+  padding: 2em;
+}
+
+.card:nth-child(even) img {
+  order: 2;
+}
+
+.galeria {
+  margin: 2em;
+  height: 20em;
+  gap: 0.5em;
+  display: flex;
+
+}
+
+.galeria div {
+  flex: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  border-radius: 10%;
+  transition: all 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+}
+
+.galeria div:hover {
+  flex: 3;
+
+}
+
+.galeria:hover div:not(:hover) {
+  filter: grayscale(100%) blur(2px);
+
+} 
